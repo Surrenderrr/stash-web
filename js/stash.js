@@ -106,6 +106,23 @@ window.stash = {
     async forgetKey() { await kvDel('key'); },
     lock() { dataKey = null; },
 
+    // Расшифровать данные ключом открытого хранилища; null - ключ не подходит
+    async openData(sealedB64) {
+        if (!dataKey) return null;
+        try {
+            return dec.decode(await open(dataKey, sealedB64));
+        } catch {
+            return null;
+        }
+    },
+
+    // Вернулись в приложение (iOS не держит вкладку в фоне) и раз в минуту, пока открыто, - синхронизировать
+    watchVisibility(dotnet) {
+        const ping = () => { if (document.visibilityState === 'visible') dotnet.invokeMethodAsync('OnVisible'); };
+        document.addEventListener('visibilitychange', ping);
+        setInterval(ping, 60000);
+    },
+
     async seal(json) {
         if (!dataKey) throw new Error('Хранилище заблокировано');
         return seal(dataKey, enc.encode(json));
