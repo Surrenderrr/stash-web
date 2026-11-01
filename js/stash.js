@@ -155,6 +155,16 @@ window.stash = {
         };
     },
 
+    // Плавно прокрутить к дню недели (под липкой шапкой - с отступом)
+    scrollToId(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 12, behavior: 'smooth' });
+        el.classList.remove('flash');
+        void el.offsetWidth;
+        el.classList.add('flash');
+    },
+
     autosize(el) {
         if (!el) return;
         el.style.height = 'auto';
