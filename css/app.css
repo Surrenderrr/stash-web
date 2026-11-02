@@ -114,11 +114,13 @@ code { font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: .88
 .page {
     max-width: 720px; margin: 0 auto;
     padding: calc(var(--safe-t) + 10px) 16px calc(110px + var(--safe-b));
-    /* backwards, не both: после анимации на странице не должно остаться transform,
-       иначе шторка и кнопка "+" (position: fixed) встанут относительно страницы, а не экрана */
+    /* Страница поднимается сдвигом top, а не transform: любой transform у предка делает
+       position: fixed относительным странице - кнопка "+" и шторка во время анимации
+       оказывались вверху и потом "падали" на место */
+    position: relative;
     animation: pageIn .38s var(--ease) backwards;
 }
-@keyframes pageIn { from { opacity: 0; transform: translateY(14px) scale(.985); } }
+@keyframes pageIn { from { opacity: 0; top: 14px; } to { top: 0; } }
 
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
 @keyframes pop { 0% { transform: scale(.85); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
