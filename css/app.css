@@ -492,6 +492,8 @@ select.field { appearance: none; -webkit-appearance: none; }
 }
 .note-card:active { transform: scale(.97); }
 .note-card-head { display: flex; align-items: center; gap: 6px; }
+.note-card-icon { width: 22px; height: 22px; border-radius: 22%; object-fit: cover; flex: none; }
+.note-card-emoji { font-size: 19px; line-height: 1; flex: none; }
 .note-card-title { flex: 1; min-width: 0; font-weight: 700; font-size: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .note-card-pin { color: var(--accent); }
 .note-card-text { font-size: 14px; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
