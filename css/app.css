@@ -491,6 +491,7 @@ select.field { appearance: none; -webkit-appearance: none; }
     transition: transform .25s var(--spring);
 }
 .note-card:active { transform: scale(.97); }
+.meta-attach { font-size: 12px; color: var(--muted); white-space: nowrap; }
 .note-card-head { display: flex; align-items: center; gap: 6px; }
 .note-card-icon { width: 22px; height: 22px; border-radius: 22%; object-fit: cover; flex: none; }
 .note-card-emoji { font-size: 19px; line-height: 1; flex: none; }
