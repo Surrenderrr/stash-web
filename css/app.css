@@ -516,7 +516,8 @@ select.field { appearance: none; -webkit-appearance: none; }
 .note-bar { display: flex; align-items: center; gap: 4px; margin: 0 -6px 6px; }
 .note { padding: 0 2px; }
 /* Обложка заметки - как на компьютере: картинка на всю полосу или цвет с переходом */
-.note-cover { height: 150px; border-radius: 18px; margin: 4px 0 14px; background-size: cover; background-position: center; animation: rise .4s var(--ease) both; }
+.note-cover { display: block; width: 100%; aspect-ratio: 4 / 1; object-fit: fill; border-radius: 18px; margin: 4px 0 14px; background-size: cover; background-position: center; animation: rise .4s var(--ease) both; }
+img.note-cover { aspect-ratio: auto; height: auto; }
 .note-card-cover { display: block; height: 64px; margin: -14px -16px 6px; border-radius: 18px 18px 0 0; background-size: cover; background-position: center; }
 .note-title { font-size: 30px; line-height: 1.15; font-weight: 800; letter-spacing: -.02em; margin: 6px 0 10px; word-break: break-word; animation: rise .4s var(--ease) both; }
 .note-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; animation: rise .4s var(--ease) .05s both; }
@@ -628,3 +629,16 @@ select.field { appearance: none; -webkit-appearance: none; }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Формулы $...$ в заметках */
+.math { font-family: "Cambria Math", Cambria, "Times New Roman", serif; font-size: 1.05em; white-space: nowrap; }
+.math i { font-style: italic; }
+.math .mo { margin: 0 .2em; }
+.math .mr { margin: 0 .26em; }
+.math .mbig { font-size: 1.3em; vertical-align: -.1em; }
+.math sup, .math sub { font-size: .7em; }
+.math .msubsup { display: inline-flex; flex-direction: column; vertical-align: -.45em; font-size: .7em; line-height: 1.1; }
+.math .mfrac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: .85em; margin: 0 .12em; line-height: 1.15; }
+.math .mfrac > span:last-child { border-top: 1px solid currentColor; padding-top: 1px; }
+.math .msqrt { border-top: 1px solid currentColor; padding: 0 .1em; }
+.math .mroot { font-size: .55em; margin-right: -.35em; }
