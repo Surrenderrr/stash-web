@@ -348,6 +348,7 @@ select.field { appearance: none; -webkit-appearance: none; }
 .event .time { color: var(--event); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .event .ev-title { flex: 1; min-width: 0; }
 .event .rep { color: var(--muted); }
+.task-title .rep { color: var(--muted); margin-left: 6px; vertical-align: -2px; }
 .event { cursor: pointer; transition: transform .2s var(--spring), background .2s; -webkit-tap-highlight-color: transparent; }
 .event:active { transform: scale(.98); background: rgba(47, 124, 246, .16); }
 
