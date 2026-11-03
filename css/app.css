@@ -475,6 +475,7 @@ select.field { appearance: none; -webkit-appearance: none; }
     color: var(--c); background: color-mix(in srgb, var(--c) 18%, transparent);
 }
 .folder-ic .emoji { font-size: 22px; }
+.folder-ic .folder-img { width: 26px; height: 26px; border-radius: 7px; object-fit: cover; }
 .folder-name { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .folder-count { font-size: 12px; color: var(--muted); }
 .folder-pin { position: absolute; top: 12px; right: 12px; color: var(--muted); }
