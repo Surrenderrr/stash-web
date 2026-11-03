@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "a5/gl14H",
+  "version": "jr4EbhKO",
   "assets": [
     {
       "hash": "sha256-X+cBmMlZK3chRymbDbqqmx3+GIX6O3IVt18hqlKlDI4=",
@@ -166,23 +166,27 @@ self.assetsManifest = {
       "url": "_framework/icudt.oh1zvcfom8.dat"
     },
     {
+      "hash": "sha256-ft5E74UR2toLLWgt7MrQTPI0Km7T2gmCkmEHZxnIn/c=",
+      "url": "apple-touch-icon.png"
+    },
+    {
       "hash": "sha256-Mbi56p17EtyU9wVHWhHHjDaORB7D0EuzNhmS7UptqMU=",
       "url": "css/app.css"
     },
     {
-      "hash": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "hash": "sha256-kxeci9IPvPvvo7Z7drP/RbT7IiSX8P6vTTDwdD7oDaE=",
       "url": "favicon.png"
     },
     {
-      "hash": "sha256-DbpQaq68ZSb5IoPosBErM1QWBfsbTxpJqhU0REi6wP4=",
+      "hash": "sha256-YgkQ+4/bO6EVj1UWvk+ZBl79EVPuK4l81ti5nN06tuo=",
       "url": "icon-192.png"
     },
     {
-      "hash": "sha256-oEo6d+KqX5fjxTiZk/w9NB3Mi0+ycS5yLwCKwr4IkbA=",
+      "hash": "sha256-it7JHowwpgGc2t4YY+AibFWr6+ta8/4yAmL7p0d2TiI=",
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-vK+cF7igMMwCx5s47uOaOks2RRFErFyVVxba9MYRyIg=",
+      "hash": "sha256-DqlqOqscBz9N74I4cvvMFnM6+KslNmUvTmJhTDYTkBU=",
       "url": "index.html"
     },
     {
