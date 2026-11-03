@@ -12,7 +12,7 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Stash" />
-    <link href="_framework/dotnet.6sfiy92mrj.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-mhltaEw6/R7jfmTooVbgs3F1dkPVU8wRtMczwTP87OY=" />
+    <link href="_framework/dotnet.z6mnv9tdal.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-GyPHcrvxS2JqDShg3zIOH9zvi4kW4sLFeqXxu8iVVT0=" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="Stash.Web.styles.css" rel="stylesheet" />
@@ -21,20 +21,20 @@
     <script type="importmap">{
   "imports": {
     "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.w3qd1tpl0e.js",
-    "./_framework/dotnet.js": "./_framework/dotnet.6sfiy92mrj.js",
     "./_framework/dotnet.native.js": "./_framework/dotnet.native.odbzwl2xnx.js",
-    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.v06hirbjsv.js"
+    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.v06hirbjsv.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.z6mnv9tdal.js"
   },
   "scopes": {},
   "integrity": {
     "./_framework/blazor.webassembly.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
     "./_framework/blazor.webassembly.w3qd1tpl0e.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
-    "./_framework/dotnet.6sfiy92mrj.js": "sha256-mhltaEw6/R7jfmTooVbgs3F1dkPVU8wRtMczwTP87OY=",
-    "./_framework/dotnet.js": "sha256-mhltaEw6/R7jfmTooVbgs3F1dkPVU8wRtMczwTP87OY=",
+    "./_framework/dotnet.js": "sha256-GyPHcrvxS2JqDShg3zIOH9zvi4kW4sLFeqXxu8iVVT0=",
     "./_framework/dotnet.native.js": "sha256-XBj8qpppr2BgVF8EaVXF6o6GXzRll4/QUWl8hIOsUe0=",
     "./_framework/dotnet.native.odbzwl2xnx.js": "sha256-XBj8qpppr2BgVF8EaVXF6o6GXzRll4/QUWl8hIOsUe0=",
     "./_framework/dotnet.runtime.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds=",
-    "./_framework/dotnet.runtime.v06hirbjsv.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds="
+    "./_framework/dotnet.runtime.v06hirbjsv.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds=",
+    "./_framework/dotnet.z6mnv9tdal.js": "sha256-GyPHcrvxS2JqDShg3zIOH9zvi4kW4sLFeqXxu8iVVT0="
   }
 }</script>
 </head>
@@ -52,7 +52,13 @@
     <script src="js/stash.js"></script>
     <script src="_framework/blazor.webassembly.w3qd1tpl0e.js"></script>
     <script>
-        navigator.serviceWorker.register('service-worker.js', { updateViaCache: 'none' });
+        // Приложение на телефоне может днями висеть в памяти, не перезагружая страницу, - а новую версию
+        // браузер ищет только при открытии. Поэтому проверяем сами: при возвращении в приложение и каждые 5 минут
+        navigator.serviceWorker.register('service-worker.js', { updateViaCache: 'none' }).then(reg => {
+            const check = () => reg.update().catch(() => { });
+            document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') check(); });
+            setInterval(check, 5 * 60 * 1000);
+        });
         // Пришла новая версия приложения - перезагрузить страницу один раз
         let hadController = !!navigator.serviceWorker.controller;
         navigator.serviceWorker.addEventListener('controllerchange', () => {

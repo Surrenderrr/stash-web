@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "EFQBYNiY",
+  "version": "IBfXwno3",
   "assets": [
     {
       "hash": "sha256-X+cBmMlZK3chRymbDbqqmx3+GIX6O3IVt18hqlKlDI4=",
@@ -58,8 +58,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.lzoc90st8z.wasm"
     },
     {
-      "hash": "sha256-kTaMYTzGcsFr50pAaJ2+lskebgoKST/BDqzvuQO4hOs=",
-      "url": "_framework/Stash.Web.1k0nwlor6a.wasm"
+      "hash": "sha256-rlQNIoy3HDs2y1Bskof+ceVe/V2fDY69OIqHfyazkcc=",
+      "url": "_framework/Stash.Web.m60z1i8n32.wasm"
     },
     {
       "hash": "sha256-Ai8gBArMQ2ohC4pxR6hH87CWGGI2rQqZDamR/AKEtNE=",
@@ -146,10 +146,6 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.w3qd1tpl0e.js"
     },
     {
-      "hash": "sha256-mhltaEw6/R7jfmTooVbgs3F1dkPVU8wRtMczwTP87OY=",
-      "url": "_framework/dotnet.6sfiy92mrj.js"
-    },
-    {
       "hash": "sha256-8WLfT/MlMZ0/n/4JDa2iWS5vCGvG7u3igDx207JapEY=",
       "url": "_framework/dotnet.native.53crtoxdrk.wasm"
     },
@@ -162,6 +158,10 @@ self.assetsManifest = {
       "url": "_framework/dotnet.runtime.v06hirbjsv.js"
     },
     {
+      "hash": "sha256-GyPHcrvxS2JqDShg3zIOH9zvi4kW4sLFeqXxu8iVVT0=",
+      "url": "_framework/dotnet.z6mnv9tdal.js"
+    },
+    {
       "hash": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",
       "url": "_framework/icudt.oh1zvcfom8.dat"
     },
@@ -170,7 +170,7 @@ self.assetsManifest = {
       "url": "apple-touch-icon.png"
     },
     {
-      "hash": "sha256-Mbi56p17EtyU9wVHWhHHjDaORB7D0EuzNhmS7UptqMU=",
+      "hash": "sha256-p4p7kShOWws8iOudCbTgFQVsDcthNhpgUDJQ49J/gXk=",
       "url": "css/app.css"
     },
     {
@@ -186,7 +186,7 @@ self.assetsManifest = {
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-1TX0q5dsJtmkyRVIsvF335PpkRhpE6SiecBNO6Tr9NM=",
+      "hash": "sha256-1iHW6ZJB+NbNZm0c5NwEionnBvyNrbiugXWB6knubzs=",
       "url": "index.html"
     },
     {
