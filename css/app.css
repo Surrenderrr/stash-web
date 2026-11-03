@@ -512,6 +512,9 @@ select.field { appearance: none; -webkit-appearance: none; }
 /* Просмотр заметки */
 .note-bar { display: flex; align-items: center; gap: 4px; margin: 0 -6px 6px; }
 .note { padding: 0 2px; }
+/* Обложка заметки - как на компьютере: картинка на всю полосу или цвет с переходом */
+.note-cover { height: 150px; border-radius: 18px; margin: 4px 0 14px; background-size: cover; background-position: center; animation: rise .4s var(--ease) both; }
+.note-card-cover { display: block; height: 64px; margin: -14px -16px 6px; border-radius: 18px 18px 0 0; background-size: cover; background-position: center; }
 .note-title { font-size: 30px; line-height: 1.15; font-weight: 800; letter-spacing: -.02em; margin: 6px 0 10px; word-break: break-word; animation: rise .4s var(--ease) both; }
 .note-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; animation: rise .4s var(--ease) .05s both; }
 .meta-chip { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; color: var(--muted); background: var(--surface-2); }
