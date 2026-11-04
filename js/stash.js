@@ -146,6 +146,13 @@ window.stash = {
     confirm: text => window.confirm(text),
 
     // Клики по квадратикам задач внутри показанной заметки
+    // Ссылка [[Заметка#Раздел]]: прокрутить к заголовку с таким текстом (без учёта регистра)
+    scrollToHeading(title) {
+        const want = (title || '').trim().toLowerCase();
+        const el = [...document.querySelectorAll('[data-h]')].find(e => e.dataset.h.trim().toLowerCase() === want);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    },
+
     hookNote(element, dotnet) {
         element.onclick = e => {
             const box = e.target.closest('[data-line]');
