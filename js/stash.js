@@ -172,9 +172,16 @@ window.stash = {
         el.classList.add('flash');
     },
 
+    // Поле растёт под текст. Чтобы измерить высоту, его на миг сжимают - страница от этого укорачивалась
+    // и прокрутка прыгала при каждой букве; теперь прокрутка запоминается и возвращается на место
     autosize(el) {
         if (!el) return;
+        const y = window.scrollY;
+        const before = el.style.height;
         el.style.height = 'auto';
-        el.style.height = el.scrollHeight + 'px';
+        const height = el.scrollHeight + 'px';
+        el.style.height = height;
+        if (window.scrollY !== y) window.scrollTo({ top: y, behavior: 'instant' });
+        return before !== height;
     }
 };

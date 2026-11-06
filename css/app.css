@@ -16,6 +16,7 @@
     --danger: #e5484d;
     --warn: #e08a00;
     --event: #2f7cf6;
+    --study: #8b67d9;
     --high: #f0700a;
     --field: rgba(255, 255, 255, .9);
     --shadow: 0 1px 2px rgba(20, 16, 40, .05), 0 8px 24px rgba(40, 24, 110, .07);
@@ -50,6 +51,7 @@
         --danger: #ff6b6f;
         --warn: #ffb347;
         --event: #6aa7ff;
+        --study: #b49bea;
         --high: #ff9a4d;
         --field: rgba(255, 255, 255, .05);
         --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .25);
@@ -351,6 +353,14 @@ select.field { appearance: none; -webkit-appearance: none; }
 .task-title .rep { color: var(--muted); margin-left: 6px; vertical-align: -2px; }
 .event { cursor: pointer; transition: transform .2s var(--spring), background .2s; -webkit-tap-highlight-color: transparent; }
 .event:active { transform: scale(.98); background: rgba(47, 124, 246, .16); }
+/* Задачи и события из «Учёбы» - фиолетовым, как на компьютере */
+.event.study { background: rgba(155, 123, 224, .1); border-left-color: var(--study); }
+.event.study .time { color: var(--study); }
+.event.study:active { background: rgba(155, 123, 224, .2); }
+.task.study .check:not(.on) { border-color: var(--study); }
+.task.study .check.on { background: var(--study); }
+.task.study .task-title span { color: var(--study); }
+.task.study.done .task-title span { color: var(--muted); }
 
 .task { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; border-radius: 12px; }
 .task + .task { border-top: 1px solid var(--line); }
