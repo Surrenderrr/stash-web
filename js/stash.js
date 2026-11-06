@@ -179,7 +179,9 @@ window.stash = {
         const y = window.scrollY;
         const before = el.style.height;
         el.style.height = 'auto';
-        const height = el.scrollHeight + 'px';
+        // + рамка: без неё поле выходило на 2px ниже текста, получало свою прокрутку, и палец на телефоне
+        // листал её вместо страницы (страница «застревала»)
+        const height = (el.scrollHeight + el.offsetHeight - el.clientHeight) + 'px';
         el.style.height = height;
         if (window.scrollY !== y) window.scrollTo({ top: y, behavior: 'instant' });
         return before !== height;

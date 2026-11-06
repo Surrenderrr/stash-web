@@ -567,6 +567,8 @@ img.note-cover { aspect-ratio: auto; height: auto; }
     border: 1px solid var(--line); background: var(--surface); color: var(--text);
     font: inherit; font-size: 16px; line-height: 1.6; box-shadow: var(--shadow);
     transition: border-color .2s, box-shadow .2s;
+    /* Поле растёт под текст - своей прокрутки у него нет, листается только страница */
+    overflow: hidden; overscroll-behavior: none;
 }
 .text-field:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 .editor .hint { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 10px; }

@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "1CDm3n5t",
+  "version": "G/3CtvK7",
   "assets": [
     {
       "hash": "sha256-X+cBmMlZK3chRymbDbqqmx3+GIX6O3IVt18hqlKlDI4=",
@@ -58,8 +58,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.lzoc90st8z.wasm"
     },
     {
-      "hash": "sha256-perE4PzVcEWaboqXObrlCpb9euYR4Mxwz1LOP3jzmI8=",
-      "url": "_framework/Stash.Web.z62hkf4656.wasm"
+      "hash": "sha256-lypdU63gFDjPZVLjjnVm/mBJSIrdkL1KzDuNWB2497s=",
+      "url": "_framework/Stash.Web.h680csre3t.wasm"
     },
     {
       "hash": "sha256-Ai8gBArMQ2ohC4pxR6hH87CWGGI2rQqZDamR/AKEtNE=",
@@ -146,16 +146,16 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.w3qd1tpl0e.js"
     },
     {
+      "hash": "sha256-ophp7fMJLSBztAE/k/3AgAxp5SR8OqftAKmxll8qV7A=",
+      "url": "_framework/dotnet.2sbsqhz8dy.js"
+    },
+    {
       "hash": "sha256-8FvQy7D/LpulgI+V6WKIfo2fReMLG8WE/irmgNU2pjQ=",
       "url": "_framework/dotnet.native.gcd28zg6m0.wasm"
     },
     {
       "hash": "sha256-XBj8qpppr2BgVF8EaVXF6o6GXzRll4/QUWl8hIOsUe0=",
       "url": "_framework/dotnet.native.odbzwl2xnx.js"
-    },
-    {
-      "hash": "sha256-WGVctpTqUm8Jk+5qa4cXUep30p6J/DGhtzrtkLPwI+k=",
-      "url": "_framework/dotnet.oo2jljbvfj.js"
     },
     {
       "hash": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds=",
@@ -170,7 +170,7 @@ self.assetsManifest = {
       "url": "apple-touch-icon.png"
     },
     {
-      "hash": "sha256-Pv5/AmajgybfMFOF1gJx2zENcyfMryN04fWO1aEpLdI=",
+      "hash": "sha256-WR33DdfRH6wfwnsw3/zQAEhgXbWn+xssmAsn8aI+07w=",
       "url": "css/app.css"
     },
     {
@@ -186,11 +186,11 @@ self.assetsManifest = {
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-DRWNxotFQt2u60Y5Y+PP9rWBKPUsJfTEP53WAIW6Udk=",
+      "hash": "sha256-zSCGsY4l+8QQx+sPhy7rMyRc36XZUDT2DWOJy4vr3mA=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-iR7x07PtIHFjDHK9tkcY2KaRcvtPvZyh0D8pYrLx734=",
+      "hash": "sha256-khhbIust42QphF2smHj8b8H63pnKeFLjhpUq24T8Nb0=",
       "url": "js/stash.js"
     },
     {
